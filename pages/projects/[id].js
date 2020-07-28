@@ -1,9 +1,29 @@
+import { getAllPostIds, getProjectData } from "../../lib/projects";
 
-
-export const Project = () => {
-    return (  );
+export default function Project({ postData }) {
+  return (
+    <>
+      <h2>{postData.title}</h2>
+      <p>{postData.id}</p>
+      <p>{postData.date}</p>
+    </>
+  );
 }
 
 export async function getStaticPaths() {
-    // Return a list of possible value for id
-  }
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch necessary data for the blog post using params.id
+  const postData = getProjectData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
