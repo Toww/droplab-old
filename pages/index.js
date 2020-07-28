@@ -23,7 +23,10 @@ export default function Home({ allProjectsData }) {
           <ul>
             {allProjectsData.map(({ id, date, title }) => (
               <li key={id}>
-                {title} - {date}
+                <Link href="/projects/[id]" as={`/projects/${id}`}>
+                  <a>{title}</a>
+                </Link>{" "}
+                - {date}
               </li>
             ))}
           </ul>
