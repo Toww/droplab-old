@@ -8,16 +8,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
-  @apply bg-gray-800 text-white;
-  
+  @apply bg-gray-800 text-white font-body;
 }
 
-main, header {
-  @apply py-8 max-w-screen-lg m-auto;
-}
-
+main,
 header {
-  @apply pb-0
+  @apply pt-8 pb-4 px-8 max-w-screen-lg m-auto;
+}
+
+article p {
+  @apply mb-8;
 }
 
 @tailwind base;

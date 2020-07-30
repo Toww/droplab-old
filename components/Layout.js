@@ -3,7 +3,7 @@ import Link from "next/link";
 const Layout = ({ children }) => {
   return (
     <div>
-      <nav className="flex justify-center p-4">
+      <nav className="flex justify-center py-8">
         <ul className="flex justify-center items-center">
           <li>
             <Link href="/about">

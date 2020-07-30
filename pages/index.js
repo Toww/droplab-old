@@ -12,19 +12,16 @@ export default function Home({ allProjectsData }) {
       </Head>
 
       <header>
-        <h1 className="text-white text-4xl leading-tight">
+        <h1 className="text-white text-center text-3xl leading-tight">
           Hello! My name is{" "}
-          <span className="font-custom text-5xl text-red-400 tracking-wide leading-tight">
+          <span className="font-custom text-4xl text-red-400 tracking-wide leading-tight">
             Thomas,
-            <br />
-          </span>
-          I am a{" "}
-          <span className="font-custom text-5xl text-red-400 tracking-wide leading-tight">
+          </span>{" "}
+          I am a <span className="font-custom text-4xl text-red-400 tracking-wide leading-tight">
             front-end developer
           </span>{" "}
-          and used to be a
-          <span className="font-custom text-5xl text-red-300 tracking-wide leading-tight">
-            {" "}
+          and used to be a{" "}
+          <span className="font-custom text-4xl text-red-300 tracking-wide leading-tight">
             graphic designer
           </span>
           . Here is a selection of my work:

@@ -12,13 +12,16 @@ export default function Project({ projectData }) {
       </Head>
 
       <header>
-        <h3 className="font-custom text-6xl text-orange-300 leading-tight text-center">
+        <h3 className="font-custom text-center text-6xl text-orange-300 leading-tight">
           {projectData.title}
         </h3>
         <p className="text-center">{projectData.type}</p>
       </header>
       <main>
-        <article className="text-lg text-center" dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+        <article
+          className="text-lg text-center"
+          dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}
+        />
       </main>
     </Layout>
   );
