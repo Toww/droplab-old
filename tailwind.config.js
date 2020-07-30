@@ -5,8 +5,15 @@ module.exports = {
     "./components/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ["Maragsa"],
+        body: ["Poppins"]
+      }
+    },
   },
-  variants: {},
+  variants: {
+    borderWidth: ['hover'],
+  },
   plugins: [],
 };

@@ -1,38 +1,39 @@
 import Head from "next/head";
-import Link from "next/link";
+import Layout from "../components/Layout";
+import ProjectsList from "../components/ProjectsList";
 import { getSortedProjectsData } from "../lib/projects";
 
 export default function Home({ allProjectsData }) {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>Drop - Homepage</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header>
+        <h1 className="text-white text-4xl leading-tight">
+          Hello! My name is{" "}
+          <span className="font-custom text-5xl text-red-400 tracking-wide leading-tight">
+            Thomas,
+            <br />
+          </span>
+          I am a{" "}
+          <span className="font-custom text-5xl text-red-400 tracking-wide leading-tight">
+            front-end developer
+          </span>{" "}
+          and used to be a
+          <span className="font-custom text-5xl text-red-300 tracking-wide leading-tight">
+            {" "}
+            graphic designer
+          </span>
+          . Here is a selection of my work:
+        </h1>
+      </header>
       <main>
-        <h1>This is the homepage, yay! </h1>
-        <p className="text-orange-500">
-          Orange <span>blue</span>
-        </p>
-        <Link href="/about">
-          <a>About page</a>
-        </Link>
-        <section>
-          <h2>Projects</h2>
-          <ul>
-            {allProjectsData.map(({ id, date, title }) => (
-              <li key={id}>
-                <Link href="/projects/[id]" as={`/projects/${id}`}>
-                  <a>{title}</a>
-                </Link>{" "}
-                - {date}
-              </li>
-            ))}
-          </ul>
-        </section>
+        <ProjectsList allProjectsData={allProjectsData} />
       </main>
-    </div>
+    </Layout>
   );
 }
 

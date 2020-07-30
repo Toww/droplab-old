@@ -6,12 +6,12 @@ const About = () => {
   return (
     <Layout>
       <Head>
-        <title>Drop - About</title>
+        <title>Drop - Contact</title>
       </Head>
 
       <main>
         <section>
-          <h3>This is the About page</h3>
+          <h3>This is the Contact page</h3>
           <p>
             <Link href="/">
               <a>back to home</a>
