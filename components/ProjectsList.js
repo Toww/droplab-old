@@ -7,7 +7,7 @@ const ProjectsList = ({ allProjectsData }) => {
         {allProjectsData.map(({ id, type, title }) => (
           <li
             key={id}
-            className="transition-all duration-200 ease-in-out mb-12 md:mb-4 border-solid border-orange-300 border-b-1 hover:border-b-8"
+            className="transition-all duration-200 ease-in-out mb-12 md:mb-6 border-solid border-orange-300 border-b-1 hover:border-b-8"
           >
             <Link href="/projects/[id]" as={`/projects/${id}`}>
               <a className="lg:flex justify-start items-center">

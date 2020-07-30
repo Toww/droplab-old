@@ -1,0 +1,9 @@
+---
+title: 'Piñata Radio'
+order: 1
+type: 'Graphic design - Web'
+---
+
+Webdesign for Piñata when it was a magazine and a radio. Another version is now online since it is only focused on the radio and is not a magazine anymore.
+
+![Pinata Radio](/img/pinata/pinata-01.png)
