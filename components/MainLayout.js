@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const MainLayout = ({ children, title }) => {
   return (
-    <div>
+    <div className="pb-8">
       <Head>
         <title>Drop - {title}</title>
         <link rel="icon" href="/favicon.ico" />

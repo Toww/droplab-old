@@ -16,11 +16,19 @@ header {
   @apply pt-8 pb-4 px-8 max-w-screen-lg m-auto;
 }
 
-
 /* ----- PROJECTS ----- */
 
-.project article p, .project article img {
-  @apply mb-8;
+.project article p,
+.project article img {
+  @apply mb-4;
+}
+
+.project article p {
+  @apply flex justify-center -mx-2;
+}
+
+.project article p > img {
+  @apply px-2;
 }
 
 .project article a {
