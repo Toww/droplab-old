@@ -1,4 +1,3 @@
-import Head from "next/head";
 import MainLayout from "../components/MainLayout";
 import ProjectsList from "../components/ProjectsList";
 import { getSortedProjectsData } from "../lib/projects";

@@ -14,9 +14,8 @@ export default function Layout(frontMatter) {
           </header>
           <main>
             <article className="text-lg text-center">{content}</article>
-            <div className="my-4 w-100 h-1 bg-white" />
+            <div className="my-8 w-100 h-px bg-orange-200" />
           </main>
-          
         </div>
       </MainLayout>
     );

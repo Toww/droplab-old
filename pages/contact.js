@@ -4,7 +4,7 @@ import MainLayout from "../components/MainLayout";
 
 const About = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Contact">
       <Head>
         <title>Drop - Contact</title>
       </Head>
