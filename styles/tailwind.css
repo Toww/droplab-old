@@ -16,11 +16,14 @@ header {
   @apply pt-8 pb-4 px-8 max-w-screen-lg m-auto;
 }
 
-article p {
+
+/* ----- PROJECTS ----- */
+
+.project article p, .project article img {
   @apply mb-8;
 }
 
-article a {
+.project article a {
   @apply underline;
 }
 

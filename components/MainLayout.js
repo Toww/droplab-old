@@ -1,8 +1,13 @@
+import Head from "next/head";
 import Link from "next/link";
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children, title }) => {
   return (
     <div>
+      <Head>
+        <title>Drop - {title}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <nav className="flex justify-center py-8">
         <ul className="flex justify-center items-center">
           <li>
@@ -34,4 +39,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default MainLayout;

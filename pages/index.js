@@ -1,15 +1,11 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
+import MainLayout from "../components/MainLayout";
 import ProjectsList from "../components/ProjectsList";
 import { getSortedProjectsData } from "../lib/projects";
 
 export default function Home({ allProjectsData }) {
   return (
-    <Layout>
-      <Head>
-        <title>Drop - Homepage</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <MainLayout title="Homepage">
 
       <header>
         <h1 className="text-white text-center text-3xl leading-tight">
@@ -30,7 +26,7 @@ export default function Home({ allProjectsData }) {
       <main>
         <ProjectsList allProjectsData={allProjectsData} />
       </main>
-    </Layout>
+    </MainLayout>
   );
 }
 

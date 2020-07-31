@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Head from "next/head";
-import Layout from "../components/Layout";
+import MainLayout from "../components/MainLayout";
 
 const About = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Head>
         <title>Drop - Contact</title>
       </Head>
@@ -19,7 +19,7 @@ const About = () => {
           </p>
         </section>
       </main>
-    </Layout>
+    </MainLayout>
   );
 };
 
