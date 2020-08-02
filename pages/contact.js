@@ -10,13 +10,46 @@ const About = () => {
       </Head>
 
       <main>
+        <header>
+          <h3 className="font-custom text-center text-6xl text-orange-300 leading-tight">
+            Want to say hello ?
+          </h3>
+        </header>
         <section>
-          <h3>This is the Contact page</h3>
-          <p>
-            <Link href="/">
-              <a>back to home</a>
-            </Link>
-          </p>
+          <form
+            className="w-3/4 mx-auto mt-6"
+            action="https://getform.io/f/760a1a0f-021d-4980-aba7-64b4dfee609f"
+            method="POST"
+          >
+            <div className="inline-block md:w-1/2 md:pr-4">
+              <label className="block text-orange-300 text-lg mb-2" htmlFor="name">
+                Name
+              </label>
+              <input required className="mb-8"></input>
+            </div>
+            <div className="inline-block md:w-1/2 md:pl-4">
+              <label className="w-100 block text-orange-300 text-lg mb-2" htmlFor="name">
+                Email
+              </label>
+              <input required className="mb-8" type="email" name="email"></input>
+            </div>
+            <div>
+              <label
+                className="block text-orange-300 text-lg mb-2"
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+              className="appearance-none resize-none h-32 rounded w-full py-2 px-3 text-gray-700 mb-8"
+                required
+                type="text"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button className="block w-1/2 mx-auto border-2 text-bold border-orange-300 text-orange-300 hover:bg-orange-300 hover:text-gray-800 rounded py-4 px-8" type="submit">Send</button>
+          </form>
         </section>
       </main>
     </MainLayout>
