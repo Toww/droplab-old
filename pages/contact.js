@@ -10,7 +10,7 @@ const About = () => {
       </Head>
 
       <main>
-        <header>
+        <header className="m-0 p-0">
           <h3 className="font-custom text-center text-6xl text-orange-300 leading-tight">
             Want to say hello ?
           </h3>
