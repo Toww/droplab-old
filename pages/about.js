@@ -45,7 +45,7 @@ const About = () => {
             </svg>
             </a>
             {/* Linkedin */}
-            <a className="block" href="https://www.linkedin.com/in/thomas-guilmin-85572159/">
+            <a className="block" href="https://www.linkedin.com/in/thomas-guilmin-85572159">
             <svg
               className="ml-6 w-10 mt-1"
               xmlns="http://www.w3.org/2000/svg"
