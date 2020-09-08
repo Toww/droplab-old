@@ -11,9 +11,9 @@ const About = () => {
 
       <main>
         <header className="m-0 p-0">
-          <h3 className="font-custom text-center text-6xl text-orange-300 leading-tight">
+          <h2 className="font-custom text-center text-6xl text-orange-300 leading-tight">
             About
-          </h3>
+          </h2>
         </header>
         <section>
           <p className="mx-auto mt-6 text-xl px-4 text-center leading-relaxed">

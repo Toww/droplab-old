@@ -11,9 +11,9 @@ const ProjectsList = ({ allProjectsData }) => {
           >
             <Link href="/projects/[id]" as={`/projects/${id}`}>
               <a className="lg:flex justify-start items-center leading-none">
-                <h3 className="font-custom text-6xl text-orange-300 leading-none">
+                <h2 className="font-custom text-6xl text-orange-300 leading-none">
                   {title}
-                </h3>
+                </h2>
                 <p className="lg:ml-4 mb-2 lg:mb-0">{type}</p>
               </a>
             </Link>
