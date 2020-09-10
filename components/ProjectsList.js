@@ -3,18 +3,18 @@ import Link from "next/link";
 const ProjectsList = ({ allProjectsData }) => {
   return (
     <section>
-      <ul>
+      <ul className="mt-2">
         {allProjectsData.map(({ id, type, title }) => (
           <li
             key={id}
-            className="transition-all duration-200 ease-in-out mb-12 md:mb-8 border-solid border-orange-300 border-b-1 hover:border-b-8"
+            className="mb-12 md:mb-8 border-solid border-orange-300 border-b-1 hover:border-b-8 transition-all duration-200 ease-in-out"
           >
             <Link href="/projects/[id]" as={`/projects/${id}`}>
-              <a className="lg:flex justify-start items-center leading-none">
-                <h2 className="font-custom text-6xl text-orange-300 leading-none">
+              <a className="p-0 m-0">
+                <h2 className="lg:inline-block font-custom text-6xl text-orange-300 leading-none">
                   {title}
                 </h2>
-                <p className="lg:ml-4 mb-2 lg:mb-0">{type}</p>
+                <p className="lg:inline-block mt-2 lg:mt-0 lg:ml-3 leading-tight">{type}</p>
               </a>
             </Link>
           </li>
