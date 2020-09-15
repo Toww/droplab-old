@@ -1,4 +1,8 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   purge: [
     // Use *.tsx if using TypeScript
     "./pages/**/*.js",
@@ -8,12 +12,12 @@ module.exports = {
     extend: {
       fontFamily: {
         custom: ["Maragsa"],
-        body: ["Poppins"]
-      }
+        body: ["Poppins"],
+      },
     },
   },
   variants: {
-    borderWidth: ['hover'],
+    borderWidth: ["hover"],
   },
   plugins: [],
 };

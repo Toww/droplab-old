@@ -20,15 +20,15 @@ header {
 
 .project article p,
 .project article img {
-  @apply mb-4;
+  @apply mb-6;
 }
 
-.project article p {
-  @apply flex justify-center -mx-2;
+.two-imgs {
+  @apply flex -mx-2;
 }
 
-.project article p > img {
-  @apply px-2;
+.two-imgs img {
+  @apply w-1/2 px-2;
 }
 
 .project article a {
