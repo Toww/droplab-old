@@ -6,7 +6,7 @@ const VimeoEmbed = ({ videoUrl }) => {
           src={videoUrl}
           style={{ position:'absolute', top:"0px", left:"0px", width:'100%', height:'100%' }}
           frameBorder="0"
-          allow="autoplay; fullscreen"
+          allow="fullscreen"
           allowFullScreen
         ></iframe>
       </p>
