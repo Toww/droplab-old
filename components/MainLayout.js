@@ -8,7 +8,6 @@ const MainLayout = ({ children, title }) => {
         <title>Drop - {title}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="Description" content="Drop - Personal portfolio" />
-
       </Head>
       <nav className="flex justify-center py-8">
         <ul className="flex justify-center items-center">
@@ -19,12 +18,12 @@ const MainLayout = ({ children, title }) => {
           </li>
           <li>
             <Link href="/">
-              <h1
+              <a
                 id="logo"
                 className="font-custom text-5xl font-bold mx-10 text-orange-300"
               >
-                <a href="/">Drop</a>
-              </h1>
+                Drop
+              </a>
             </Link>
           </li>
 
