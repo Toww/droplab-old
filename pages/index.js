@@ -1,6 +1,6 @@
-import MainLayout from "../components/MainLayout";
-import ProjectsList from "../components/ProjectsList";
-import { getSortedProjectsData } from "../lib/projects";
+import MainLayout from "components/MainLayout";
+import ProjectsList from "components/ProjectsList";
+import { getSortedProjectsData } from "lib/projects";
 
 export default function Home({ allProjectsData }) {
   return (

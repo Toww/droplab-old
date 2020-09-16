@@ -1,13 +1,13 @@
+import hydrate from "next-mdx-remote/hydrate";
 import {
   getAllProjectsIds,
   getProjectData,
   getNextProject,
   getPrevProject,
-} from "../../lib/projects";
-import hydrate from "next-mdx-remote/hydrate";
-import MainLayout from "../../components/MainLayout";
-import VimeoEmbed from "../../components/VimeoEmbed";
-import ProjectsNavLinks from "../../components/ProjectsNavLinks";
+} from "lib/projects";
+import MainLayout from "components/MainLayout";
+import VimeoEmbed from "components/VimeoEmbed";
+import ProjectsNavLinks from "components/ProjectsNavLinks";
 
 const components = { VimeoEmbed };
 

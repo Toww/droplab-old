@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import MainLayout from "../components/MainLayout";
+import MainLayout from "components/MainLayout";
 
 const About = () => {
   return (

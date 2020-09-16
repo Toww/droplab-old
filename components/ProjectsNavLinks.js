@@ -23,7 +23,7 @@ const ProjectsNavLinks = ({prevProject, nextProject}) => {
       {nextProject ? (
         <Link href={`/projects/${nextProject.id}`}>
           <a className="w-1/3 font-custom text-right text-xl text-orange-300 mt-3">
-            <span class="underline">{nextProject.title}</span>
+            <span className="underline">{nextProject.title}</span>
             {" >"}
           </a>
         </Link>
