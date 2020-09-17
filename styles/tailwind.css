@@ -16,6 +16,28 @@ header {
   @apply pt-8 pb-4 px-8 max-w-screen-lg m-auto;
 }
 
+/* ----- HOMEPAGE ----- */
+
+.project-line {
+  @apply py-6 border-orange-300 transition-all duration-200 ease-in-out;
+}
+
+.project-line:hover {
+  @apply border-b-8 border-solid border-orange-300;
+}
+
+/* On hover over the list, every project line's opacity changes */
+.project-list:hover > .project-line {
+  opacity: 0.2;
+}
+
+/* Only hovered project has full opacity and style is modified accordingly */
+.project-list > .project-line:hover {
+  @apply transition-all duration-200 ease-in-out;
+  opacity: 1;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
 /* ----- PROJECTS ----- */
 
 .project article p,
@@ -40,8 +62,17 @@ form input {
   @apply appearance-none rounded w-full py-2 px-3 text-gray-700;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
   @apply outline-none shadow-outline;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@screen md {
+  .project-line {
+    @apply py-4;
+  }
 }
 
 @tailwind base;

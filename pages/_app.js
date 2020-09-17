@@ -1,7 +1,12 @@
-import 'styles/tailwind.css'
+import CursorImageContextProvider from "contexts/CursorImageContext";
+import "styles/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <CursorImageContextProvider>
+      <Component {...pageProps} />
+    </CursorImageContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

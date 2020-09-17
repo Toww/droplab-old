@@ -8,11 +8,11 @@ const ProjectsNavLinks = ({prevProject, nextProject}) => {
         <Link href={`/projects/${prevProject.id}`}>
           <a className="w-1/3 font-custom text-left text-xl text-orange-300 mt-3">
             {"< "}
-            <span class="underline">{prevProject.title}</span>
+            <span className="underline">{prevProject.title}</span>
           </a>
         </Link>
       ) : (
-        <div class="w-1/3"></div>
+        <div className="w-1/3"></div>
       )}
       <Link href="/">
         <a className="font-custom text-center text-xl underline text-orange-300 mt-3 w-1/3">
@@ -28,7 +28,7 @@ const ProjectsNavLinks = ({prevProject, nextProject}) => {
           </a>
         </Link>
       ) : (
-        <div class="w-1/3"></div>
+        <div className="w-1/3"></div>
       )}
     </div>
   );
