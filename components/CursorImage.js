@@ -23,6 +23,7 @@ const CursorImage = () => {
         }}
         className="absolute pointer-events-none transition-transform duration-500"
         src={cursorImage.src}
+        alt={`${cursorImage.title} thumbnail`}
       ></img>
     </div>
   );

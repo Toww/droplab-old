@@ -6,15 +6,16 @@ import { CursorImageContext } from "contexts/CursorImageContext";
 const ProjectsList = ({ allProjectsData }) => {
   const [, setCursorImage] = useContext(CursorImageContext);
 
-  const toggleCursorImage = useCallback((id) => {
-    // If there is no id defined then we change active but not the src
+  const toggleCursorImage = useCallback((id, title) => {
+    // If there is no id defined then we change active but not the src and title
     if (id === undefined) {
-      setCursorImage(({ active, src }) => ({ active: !active, src }));
+      setCursorImage(({ active, src, title }) => ({ active: !active, src, title }));
     } else {
       // If id is defined, change active and give the id to modify thumbnail src accordingly
       setCursorImage(({ active }) => ({
         active: !active,
         src: `img/thumbnails/${id}.png`,
+        title
       }));
     }
   });
@@ -27,7 +28,7 @@ const ProjectsList = ({ allProjectsData }) => {
           <li
             key={id}
             className="project-line"
-            onMouseEnter={() => toggleCursorImage(id)}
+            onMouseEnter={() => toggleCursorImage(id, title)}
             onMouseLeave={() => toggleCursorImage()}
             // Added onClick to avoid issues with page change
             onClick={() => toggleCursorImage()}
