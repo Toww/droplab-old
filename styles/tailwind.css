@@ -19,11 +19,11 @@ header {
 /* ----- HOMEPAGE ----- */
 
 .project-line {
-  @apply py-6 border-orange-300 transition-all duration-200 ease-in-out;
+  @apply py-6 border border-solid border-orange-300 border-0 transition-all duration-200 ease-in-out;
 }
 
 .project-line:hover {
-  @apply border-b-8 border-solid border-orange-300;
+  @apply border-b-8;
 }
 
 /* On hover over the list, every project line's opacity changes */
@@ -35,7 +35,7 @@ header {
 .project-list > .project-line:hover {
   @apply transition-all duration-200 ease-in-out;
   opacity: 1;
-  text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* ----- PROJECTS ----- */
