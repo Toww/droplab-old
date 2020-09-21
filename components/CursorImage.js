@@ -1,10 +1,31 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import useMousePosition from "hooks/useMousePosition";
 import { CursorImageContext } from "contexts/CursorImageContext";
 
+//Preparing a variable to check if the device loading the website is
+// a touch device on first load
+let isTouchDevice;
+
 const CursorImage = () => {
+  // Checking mouse position and using cursorImage context to check if cursor image
+  // should be displayed and which thumbnail should be loaded
   const { clientX, clientY, mouseFarFromTop } = useMousePosition();
   const [cursorImage] = useContext(CursorImageContext);
+
+  // Check touch device on first load via useEffect
+  useEffect(() => {
+    if ("ontouchstart" in window) {
+      isTouchDevice = true;
+    } else {
+      isTouchDevice = false;
+    }
+  }, []);
+
+  // If a touch device is detected, don't load the component and return null
+  if (isTouchDevice) {
+    return null;
+  }
+
   return (
     <div
       style={{
@@ -19,7 +40,9 @@ const CursorImage = () => {
           top: clientY,
           // When mouse is far from top of window,
           // to avoid hiding elements, put the image on top of the cursor
-          transform: mouseFarFromTop ? "translate(0%, -105%)" : "translate(0%, 10%)"
+          transform: mouseFarFromTop
+            ? "translate(0%, -105%)"
+            : "translate(0%, 10%)",
         }}
         className="absolute pointer-events-none transition-transform duration-500"
         src={cursorImage.src}

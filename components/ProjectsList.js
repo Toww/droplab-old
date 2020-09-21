@@ -9,13 +9,17 @@ const ProjectsList = ({ allProjectsData }) => {
   const toggleCursorImage = useCallback((id, title) => {
     // If there is no id defined then we change active but not the src and title
     if (id === undefined) {
-      setCursorImage(({ active, src, title }) => ({ active: !active, src, title }));
+      setCursorImage(({ active, src, title }) => ({
+        active: !active,
+        src,
+        title,
+      }));
     } else {
       // If id is defined, change active and give the id to modify thumbnail src accordingly
       setCursorImage(({ active }) => ({
         active: !active,
         src: `img/thumbnails/${id}.png`,
-        title
+        title,
       }));
     }
   });
@@ -33,7 +37,7 @@ const ProjectsList = ({ allProjectsData }) => {
             // Added onClick to avoid issues with page change
             onClick={() => toggleCursorImage()}
           >
-            <Link href="/projects/[id]" as={`/projects/${id}`}>
+            <Link href="/projects/[id]" as={`/projects/${id}`} scroll={false}>
               <a className="p-0 m-0">
                 <h2 className="lg:inline-block font-custom text-6xl text-orange-300 leading-none">
                   {title}

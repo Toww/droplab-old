@@ -1,5 +1,6 @@
+// Used to use absolute paths on project
 {
     "compilerOptions": {
       "baseUrl": "."
     }
-  }
+}

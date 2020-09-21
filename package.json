@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "^2.6.15",
     "gray-matter": "^4.0.2",
     "next": "9.5.3",
     "next-mdx-remote": "^1.0.0",
