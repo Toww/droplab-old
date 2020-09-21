@@ -1,5 +1,4 @@
-import Link from "next/link";
-import MainLayout from "./MainLayout";
+import MainLayout from "./layout/MainLayout";
 import Head from "next/head";
 
 const Project = ({ children, title }) => {

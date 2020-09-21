@@ -5,10 +5,11 @@ import {
   getNextProject,
   getPrevProject,
 } from "lib/projects";
-import MainLayout from "components/MainLayout";
-import VimeoEmbed from "components/VimeoEmbed";
-import ProjectsNavLinks from "components/ProjectsNavLinks";
+import MainLayout from "components/layout/MainLayout";
+import VimeoEmbed from "components/projects/VimeoEmbed";
+import ProjectsNavLinks from "components/projects/ProjectsNavLinks";
 
+// Prepare an object with every components that are used in mdx files
 const components = { VimeoEmbed };
 
 export default function Project({
@@ -47,7 +48,8 @@ export default function Project({
   );
 }
 
-// Getting all possible path values from projects mdx files names
+// Getting all possible path values from mdx files names
+// for Dynamic routing
 export async function getStaticPaths() {
   const paths = getAllProjectsIds();
   return {
@@ -56,14 +58,14 @@ export async function getStaticPaths() {
   };
 }
 
-// Getting props fort the project
+// Getting props for the project
 export async function getStaticProps({ params }) {
   // Get project content and metadata
   const { source, frontMatter } = await getProjectData(params.id, components);
 
-  // Get prev and next project frontmatter object
-  // As order starts from 1 and the array of object from 0,
-  // we have to subtract 1 to get the good array index
+  // Get prev and next projects' frontmatter object
+  // As order starts from 1 and the array  from 0,
+  // subtract 1 to get the good array index
   const prevProject = getPrevProject(frontMatter.order - 1);
   const nextProject = getNextProject(frontMatter.order - 1);
   return {

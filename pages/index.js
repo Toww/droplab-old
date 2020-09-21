@@ -1,8 +1,9 @@
-import MainLayout from "components/MainLayout";
-import ProjectsList from "components/ProjectsList";
+import MainLayout from "components/layout/MainLayout";
+import ProjectsList from "components/projects/ProjectsList";
 import { getSortedProjectsData } from "lib/projects";
 import { motion } from "framer-motion";
 
+// Motion framer variant setting
 const indexVariant = {
   hidden: {
     opacity: 0,
@@ -24,6 +25,7 @@ export default function Home({ allProjectsData }) {
     <MainLayout title="Homepage">
       <motion.div variants={indexVariant} initial="hidden" animate="visible">
         <header>
+          {/* Intro */}
           <motion.h1
             variants={indexVariant}
             className="text-white text-center text-2xl leading-tight"
@@ -45,6 +47,7 @@ export default function Home({ allProjectsData }) {
             . Here is a selection of my work:
           </motion.h1>
         </header>
+        {/* Projects List */}
         <motion.main variants={indexVariant}>
           <ProjectsList allProjectsData={allProjectsData} />
         </motion.main>

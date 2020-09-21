@@ -11,11 +11,11 @@ const useMousePosition = () => {
   const updatePosition = (event) => {
     const { clientX, clientY } = event;
     // If mouse is far from top of window, notice it to use it with CursorImage
-    const mouseFarFromTop = clientY > window.innerHeight * 0.6  ? true : false;
+    const mouseFarFromTop = clientY > window.innerHeight * 0.6 ? true : false;
     setPosition({
       clientX,
       clientY,
-      mouseFarFromTop
+      mouseFarFromTop,
     });
   };
 
@@ -31,7 +31,7 @@ const useMousePosition = () => {
     };
   }, []);
 
-  // Returning cusrsor position and status from top of window
+  // Returning cursor position and status from top of window
   return position;
 };
 

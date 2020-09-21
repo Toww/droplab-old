@@ -2,8 +2,8 @@ import { useContext, useEffect } from "react";
 import useMousePosition from "hooks/useMousePosition";
 import { CursorImageContext } from "contexts/CursorImageContext";
 
-//Preparing a variable to check if the device loading the website is
-// a touch device on first load
+//Preparing a variable to check if website 
+// is loaded on a touch device on first mount
 let isTouchDevice;
 
 const CursorImage = () => {
@@ -12,7 +12,7 @@ const CursorImage = () => {
   const { clientX, clientY, mouseFarFromTop } = useMousePosition();
   const [cursorImage] = useContext(CursorImageContext);
 
-  // Check touch device on first load via useEffect
+  // Check touch device on first mount via useEffect
   useEffect(() => {
     if ("ontouchstart" in window) {
       isTouchDevice = true;
@@ -21,11 +21,11 @@ const CursorImage = () => {
     }
   }, []);
 
-  // If a touch device is detected, don't load the component and return null
+  // If a touch device is detected, prevent component from loading by returning null
   if (isTouchDevice) {
     return null;
   }
-
+  // If it is not a touch devise, return component
   return (
     <div
       style={{

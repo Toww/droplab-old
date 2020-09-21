@@ -1,10 +1,10 @@
 const VimeoEmbed = ({ videoUrl }) => {
   return (
     <>
-      <p style={{padding:'56.25% 0px 0px 0px',position:'relative'}}>
+      <p style={{ padding: "56.25% 0px 0px 0px", position: "relative" }}>
         <iframe
+          className="absolute top-0 left-0 w-full h-full "
           src={videoUrl}
-          style={{ position:'absolute', top:"0px", left:"0px", width:'100%', height:'100%' }}
           frameBorder="0"
           allow="fullscreen"
           allowFullScreen

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import MainLayout from "components/MainLayout";
+import MainLayout from "components/layout/MainLayout";
 
 const About = () => {
   return (
@@ -15,6 +15,7 @@ const About = () => {
           </h3>
         </header>
         <section>
+          {/* Contact form */}
           <form
             className="w-3/4 mx-auto mt-6"
             action="https://getform.io/f/760a1a0f-021d-4980-aba7-64b4dfee609f"

@@ -3,10 +3,10 @@ import Link from "next/link";
 const ProjectsNavLinks = ({ prevProject, nextProject }) => {
   return (
     <div className="flex justify-between">
-      {/* if there is a previous project, show a link to it */}
+      {/* if there is a previous project, shows the link */}
       {prevProject ? (
         <Link
-          href={`/projects/[id]`}
+          href="/projects/[id]"
           as={`/projects/${prevProject.id}`}
           scroll={false}
         >
@@ -23,10 +23,10 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           Back to homepage
         </a>
       </Link>
-      {/* if there is a next project, show a link to it */}
+      {/* if there is a next project, shows the link */}
       {nextProject ? (
         <Link
-          href={`/projects/[id]`}
+          href="/projects/[id]"
           as={`/projects/${nextProject.id}`}
           scroll={false}
         >
