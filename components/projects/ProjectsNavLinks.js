@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ProjectsNavLinks = ({ prevProject, nextProject }) => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-center leading-tight">
       {/* if there is a previous project, shows the link */}
       {prevProject ? (
         <Link
@@ -10,9 +10,26 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           as={`/projects/${prevProject.id}`}
           scroll={false}
         >
-          <a className="w-1/3 font-custom text-left text-xl text-orange-300 mt-3">
-            {"< "}
-            <span className="underline">{prevProject.title}</span>
+          <a className="w-1/3 font-custom text-left text-3xl md:text-xl text-orange-300 mt-3">
+            {/* Left arrow */}
+            <svg
+              class="w-8 h-8 md:w-5 md:h-5 inline mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+            {/* Project name */}
+            <span className="hidden md:inline align-middle underline">
+              {prevProject.title}
+            </span>
           </a>
         </Link>
       ) : (
@@ -31,8 +48,25 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           scroll={false}
         >
           <a className="w-1/3 font-custom text-right text-xl text-orange-300 mt-3">
-            <span className="underline">{nextProject.title}</span>
-            {" >"}
+            {/* Project name */}
+            <span className="hidden md:inline align-middle underline">
+              {nextProject.title}
+            </span>
+            {/* Right arrow */}
+            <svg
+              class="w-8 h-8 md:w-5 md:h-5 inline ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
           </a>
         </Link>
       ) : (

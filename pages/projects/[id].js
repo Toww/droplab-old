@@ -27,10 +27,10 @@ export default function Project({
       <div className="project">
         <header>
           {/* Title & type of project */}
-          <h2 className="font-custom text-center text-6xl text-orange-300 leading-tight">
+          <h2 className="font-custom text-center text-5xl md:text-6xl text-orange-300 leading-none">
             {frontMatter.title}
           </h2>
-          <p className="text-center">{frontMatter.type}</p>
+          <p className="text-center my-4">{frontMatter.type}</p>
         </header>
         <main>
           {/* Content */}

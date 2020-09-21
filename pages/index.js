@@ -24,11 +24,11 @@ export default function Home({ allProjectsData }) {
   return (
     <MainLayout title="Homepage">
       <motion.div variants={indexVariant} initial="hidden" animate="visible">
+        {/* Intro */}
         <header>
-          {/* Intro */}
           <motion.h1
             variants={indexVariant}
-            className="text-white text-center text-2xl leading-tight"
+            className="text-white text-center text-2xl md:leading-tight"
           >
             Hello! My name is{" "}
             <span className="font-custom text-3xl text-red-400 tracking-wide leading-tight">

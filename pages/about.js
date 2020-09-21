@@ -11,7 +11,7 @@ const About = () => {
 
       <main>
         <header className="m-0 p-0">
-          <h2 className="font-custom text-center text-6xl text-orange-300 leading-tight">
+          <h2 className="font-custom text-center text-6xl text-orange-300 leading-none">
             About
           </h2>
         </header>

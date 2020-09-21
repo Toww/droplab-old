@@ -13,13 +13,13 @@ body {
 
 main,
 header {
-  @apply pt-8 pb-4 px-8 max-w-screen-lg m-auto;
+  @apply mt-2 px-8 max-w-screen-lg m-auto;
 }
 
 /* ----- HOMEPAGE ----- */
 
 .project-line {
-  @apply py-6 border border-solid border-orange-300 border-0 transition-all duration-200 ease-in-out;
+  @apply py-4 border border-solid border-orange-300 border-0 transition-all duration-200 ease-in-out;
 }
 
 .project-line:hover {
@@ -70,8 +70,13 @@ form textarea:focus {
 /* ----- MEDIA QUERIES ----- */
 
 @screen md {
+  header,
+  main {
+    @apply mt-8;
+  }
+
   .project-line {
-    @apply py-4;
+    @apply py-6;
   }
 }
 
