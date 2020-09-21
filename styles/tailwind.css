@@ -45,14 +45,6 @@ header {
   @apply mb-6;
 }
 
-.two-imgs {
-  @apply flex -mx-2;
-}
-
-.two-imgs img {
-  @apply w-1/2 px-2;
-}
-
 .project article a {
   @apply underline;
 }
@@ -77,6 +69,14 @@ form textarea:focus {
 
   .project-line {
     @apply py-6;
+  }
+
+  .two-imgs {
+    @apply flex -mx-2;
+  }
+  
+  .two-imgs img {
+    @apply w-1/2 px-2;
   }
 }
 
