@@ -21,7 +21,7 @@ const About = () => {
             action="https://getform.io/f/760a1a0f-021d-4980-aba7-64b4dfee609f"
             method="POST"
           >
-            <div className="inline-block md:w-1/2 md:pr-4">
+            <div className="inline-block w-full md:w-1/2 md:pr-4">
               <label
                 className="block text-orange-300 text-lg mb-2"
                 htmlFor="name"
@@ -30,7 +30,7 @@ const About = () => {
               </label>
               <input required className="mb-8" id="name" name="name"></input>
             </div>
-            <div className="inline-block md:w-1/2 md:pl-4">
+            <div className="inline-block w-full md:w-1/2 md:pl-4">
               <label
                 className="w-100 block text-orange-300 text-lg mb-2"
                 htmlFor="email"
