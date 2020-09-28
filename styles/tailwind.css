@@ -22,22 +22,6 @@ header {
   @apply py-4 border border-solid border-orange-300 border-0 transition-all duration-200 ease-in-out;
 }
 
-.project-line:hover {
-  @apply border-b-8;
-}
-
-/* On hover over the list, every project line's opacity changes */
-.project-list:hover > .project-line {
-  opacity: 0.2;
-}
-
-/* Only hovered project has full opacity and style is modified accordingly */
-.project-list > .project-line:hover {
-  @apply transition-all duration-200 ease-in-out;
-  opacity: 1;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-}
-
 /* ----- PROJECTS ----- */
 
 .project article p,
@@ -67,14 +51,32 @@ form textarea:focus {
     @apply mt-8;
   }
 
+  /* -- Homepage --  */
+
   .project-line {
     @apply py-6;
+  }
+
+  .project-line:hover {
+    @apply border-b-8;
+  }
+
+  /* On hover over the list, every project line's opacity changes */
+  .project-list:hover > .project-line {
+    opacity: 0.2;
+  }
+
+  /* Only hovered project has full opacity and style is modified accordingly */
+  .project-list > .project-line:hover {
+    @apply transition-all duration-200 ease-in-out;
+    opacity: 1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
 
   .two-imgs {
     @apply flex -mx-2;
   }
-  
+
   .two-imgs img {
     @apply w-1/2 px-2;
   }
