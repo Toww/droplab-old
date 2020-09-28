@@ -16,7 +16,7 @@ const About = () => {
       </header>
       <main>
         <section>
-          <p className="mx-auto text-lg px-4 text-center leading-relaxed">
+          <p className="mx-auto text-lg md:px-4 text-center leading-relaxed">
             Hello again! I switched jobs from graphic design to front-end
             development around a year ago, and always have been coding on the
             side for smaller personal or work-related projects. I also love

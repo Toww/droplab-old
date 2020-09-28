@@ -28,7 +28,7 @@ export default function Home({ allProjectsData }) {
         <header>
           <motion.h1
             variants={indexVariant}
-            className="text-white mt-16 mb-12 md:mt-24 md:mb-16 text-center text-xl md:text-2xl mx-auto max-w-5xl"
+            className="text-white mt-12 mb-12 md:mt-24 md:mb-16 text-center text-xl md:text-2xl mx-auto max-w-5xl"
           >
             Hello! My name is{" "}
             <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <nav className="mt-12">
+    <nav className="mt-10 md:mt-12">
       <ul className="flex justify-center items-center">
         <li className="mt-2">
           <Link href="/about">
