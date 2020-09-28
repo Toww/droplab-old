@@ -27,7 +27,7 @@ const ProjectsList = ({ allProjectsData }) => {
   return (
     <section>
       <CursorImage />
-      <ul className="project-list mt-6 md:mt-12">
+      <ul className="project-list">
         {allProjectsData.map(({ id, type, title }) => (
           <li
             key={id}

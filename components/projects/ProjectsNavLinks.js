@@ -10,10 +10,10 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           as={`/projects/${prevProject.id}`}
           scroll={false}
         >
-          <a className="w-1/3 font-custom text-left text-3xl md:text-xl text-orange-300 mt-3">
+          <a className="w-1/3 md:flex md:justify-start md:items-center font-custom text-left text-3xl md:text-xl text-orange-300 mt-3">
             {/* Left arrow */}
             <svg
-              class="w-8 h-8 md:w-5 md:h-5 inline mr-2"
+              class="w-8 h-8 md:w-5 md:h-5 mr-2 mt-0 pt-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -27,7 +27,7 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
               ></path>
             </svg>
             {/* Project name */}
-            <span className="hidden md:inline align-middle underline">
+            <span className="hidden md:block">
               {prevProject.title}
             </span>
           </a>
@@ -36,7 +36,7 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
         <div className="w-1/3"></div>
       )}
       <Link href="/" scroll={false}>
-        <a className="font-custom text-center text-xl underline text-orange-300 mt-3 w-1/3">
+        <a className="font-custom text-center text-xl text-orange-300 mt-3 w-1/3">
           Back to homepage
         </a>
       </Link>
@@ -47,14 +47,14 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           as={`/projects/${nextProject.id}`}
           scroll={false}
         >
-          <a className="w-1/3 font-custom text-right text-xl text-orange-300 mt-3">
+          <a className="w-1/3 md:flex md:justify-end md:items-center font-custom text-right text-xl text-orange-300 mt-3">
             {/* Project name */}
-            <span className="hidden md:inline align-middle underline">
+            <span className="hidden md:block">
               {nextProject.title}
             </span>
             {/* Right arrow */}
             <svg
-              class="w-8 h-8 md:w-5 md:h-5 inline ml-2"
+              class="w-8 h-8 md:w-5 md:h-5 ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

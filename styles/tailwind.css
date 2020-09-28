@@ -46,15 +46,18 @@ form textarea:focus {
 /* ----- MEDIA QUERIES ----- */
 
 @screen md {
-  header,
+  header{
+    @apply mt-20;
+  }
+
   main {
-    @apply mt-8;
+    @apply mt-10;
   }
 
   /* -- Homepage --  */
 
   .project-line {
-    @apply py-6;
+    @apply py-5;
   }
 
   .project-line:hover {

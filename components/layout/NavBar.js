@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <nav className="pb-8" className="flex justify-center py-8">
+    <nav className="flex justify-center mt-10">
       <ul className="flex justify-center items-center">
         <li>
           <Link href="/about">
@@ -13,7 +13,7 @@ const NavBar = () => {
           <Link href="/">
             <a
               id="logo"
-              className="font-custom text-5xl font-bold mx-10 text-orange-300"
+              className="font-custom text-3xl font-bold mx-10 text-orange-300"
             >
               Drop
             </a>

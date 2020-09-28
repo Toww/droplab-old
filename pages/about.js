@@ -9,30 +9,30 @@ const About = () => {
         <title>Drop - About</title>
       </Head>
 
+      <header>
+        <h2 className="font-custom text-center text-6xl text-orange-300 leading-none">
+          About
+        </h2>
+      </header>
       <main>
-        <header className="m-0 p-0">
-          <h2 className="font-custom text-center text-6xl text-orange-300 leading-none">
-            About
-          </h2>
-        </header>
         <section>
-          <p className="mx-auto mt-6 text-xl px-4 text-center leading-relaxed">
+          <p className="mx-auto text-lg px-4 text-center leading-relaxed">
             Hello again! I switched jobs from graphic design to front-end
             development around a year ago, and always have been coding on the
             side for smaller personal or work-related projects. I also love
             music and worked on a few podcasts for Piñata Radio.
           </p>
-          <p className="mx-auto mt-6 text-xl px-4 text-center leading-relaxed">
+          <p className="mx-auto mt-8 text-lg px-4 text-center">
             Feel free to reach me through the{" "}
             <Link href="/contact">
-              <a className="font-custom underline text-orange-300 text-2xl">
+              <a className="font-custom underline text-orange-300 text-xl">
                 contact
               </a>
             </Link>{" "}
             page!
           </p>
 
-          <div className="w-50% flex justify-center align-center text-orange-300 mt-6">
+          <div className="w-50% flex justify-center align-center text-orange-300 mt-4">
             {/* Github*/}
             <a
               className="block"

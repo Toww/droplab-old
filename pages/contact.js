@@ -8,22 +8,22 @@ const About = () => {
         <title>Drop - Contact</title>
       </Head>
 
-      <main>
-        <header className="m-0 p-0">
+        <header>
           <h3 className="font-custom text-center text-6xl text-orange-300 leading-none">
             Want to say hello ?
           </h3>
         </header>
+      <main>
         <section>
           {/* Contact form */}
           <form
-            className="md:w-3/4 mx-auto mt-6"
+            className="md:w-3/4 mx-auto"
             action="https://getform.io/f/760a1a0f-021d-4980-aba7-64b4dfee609f"
             method="POST"
           >
             <div className="inline-block md:w-1/2 md:pr-4">
               <label
-                className="block text-orange-300 text-lg mb-2"
+                className="block text-lg mb-2"
                 htmlFor="name"
               >
                 Name
@@ -32,7 +32,7 @@ const About = () => {
             </div>
             <div className="inline-block md:w-1/2 md:pl-4">
               <label
-                className="w-100 block text-orange-300 text-lg mb-2"
+                className="w-100 block text-lg mb-2"
                 htmlFor="email"
               >
                 Email
@@ -47,7 +47,7 @@ const About = () => {
             </div>
             <div>
               <label
-                className="block text-orange-300 text-lg mb-2"
+                className="block text-lg mb-2"
                 htmlFor="message"
               >
                 Message
