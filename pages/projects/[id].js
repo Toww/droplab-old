@@ -30,7 +30,7 @@ export default function Project({
           <h2 className="font-custom text-center text-5xl md:text-6xl text-orange-300 leading-none">
             {frontMatter.title}
           </h2>
-          <p className="text-center mt-2">{frontMatter.type}</p>
+          <p className="text-center mt-3">{frontMatter.type}</p>
         </header>
         <main>
           {/* Content */}

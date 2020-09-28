@@ -13,7 +13,15 @@ body {
 
 main,
 header {
-  @apply mt-2 px-8 max-w-screen-lg m-auto;
+  @apply px-8 max-w-screen-lg mx-auto;
+}
+
+header {
+  @apply mt-12;
+}
+
+main {
+  @apply mt-8;
 }
 
 /* ----- HOMEPAGE ----- */
@@ -21,6 +29,11 @@ header {
 .project-line {
   @apply py-4 border border-solid border-orange-300 border-0 transition-all duration-200 ease-in-out;
 }
+
+.project-line:first-child {
+  @apply pt-0 pb-4;
+}
+
 
 /* ----- PROJECTS ----- */
 
@@ -46,12 +59,12 @@ form textarea:focus {
 /* ----- MEDIA QUERIES ----- */
 
 @screen md {
-  header{
+  header {
     @apply mt-20;
   }
 
   main {
-    @apply mt-10;
+    @apply mt-12;
   }
 
   /* -- Homepage --  */
@@ -59,6 +72,11 @@ form textarea:focus {
   .project-line {
     @apply py-5;
   }
+
+  .project-line:first-child {
+    @apply pt-0 pb-5;
+  }
+
 
   .project-line:hover {
     @apply border-b-8;

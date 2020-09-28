@@ -28,19 +28,19 @@ export default function Home({ allProjectsData }) {
         <header>
           <motion.h1
             variants={indexVariant}
-            className="text-white text-center text-2xl mx-auto max-w-5xl leading-tight"
+            className="text-white mt-16 mb-12 md:mt-24 md:mb-16 text-center text-xl md:text-2xl mx-auto max-w-5xl"
           >
             Hello! My name is{" "}
-            <span className="font-custom text-3xl text-red-400 tracking-wide">
+            <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">
               Thomas
             </span>
             , I am a{" "}
-            <span className="font-custom text-3xl text-red-400 tracking-wide">
+            <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">
               {" "}
               front-end developer
             </span>{" "}
             and{" "}
-            <span className="font-custom text-3xl text-red-400 tracking-wide">
+            <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">
               {" "}
               graphic designer
             </span>

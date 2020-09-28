@@ -2,27 +2,26 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-center mt-10">
+    <nav className="mt-12">
       <ul className="flex justify-center items-center">
-        <li>
+        <li className="mt-2">
           <Link href="/about">
-            <a className="font-custom text-lg">About</a>
+            <a className="font-custom text-lg leading-none">About</a>
           </Link>
         </li>
         <li>
           <Link href="/">
             <a
               id="logo"
-              className="font-custom text-3xl font-bold mx-10 text-orange-300"
+              className="font-custom text-4xl font-bold mx-10 text-orange-300 leading-none"
             >
               Drop
             </a>
           </Link>
         </li>
-
-        <li className="font-custom text-lg">
+        <li className="mt-2">
           <Link href="/contact">
-            <a className="font-custom text-lg">Contact</a>
+            <a className="font-custom text-lg leading-none">Contact</a>
           </Link>
         </li>
       </ul>

@@ -10,19 +10,19 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           as={`/projects/${prevProject.id}`}
           scroll={false}
         >
-          <a className="w-1/3 md:flex md:justify-start md:items-center font-custom text-left text-3xl md:text-xl text-orange-300 mt-3">
+          <a className="w-1/3 flex mt-3 justify-start items-center font-custom text-left text-xl text-orange-300">
             {/* Left arrow */}
             <svg
-              class="w-8 h-8 md:w-5 md:h-5 mr-2 mt-0 pt-0"
+              className="w-8 h-8 md:w-5 md:h-5 mr-2 mt-0 pt-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
               ></path>
             </svg>
@@ -47,23 +47,23 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           as={`/projects/${nextProject.id}`}
           scroll={false}
         >
-          <a className="w-1/3 md:flex md:justify-end md:items-center font-custom text-right text-xl text-orange-300 mt-3">
+          <a className="w-1/3 flex mt-3 justify-end items-center font-custom text-right text-xl text-orange-300">
             {/* Project name */}
             <span className="hidden md:block">
               {nextProject.title}
             </span>
             {/* Right arrow */}
             <svg
-              class="w-8 h-8 md:w-5 md:h-5 ml-2"
+              className="w-8 h-8 md:w-5 md:h-5 ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               ></path>
             </svg>
