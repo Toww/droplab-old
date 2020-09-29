@@ -28,23 +28,18 @@ export default function Home({ allProjectsData }) {
         <header>
           <motion.h1
             variants={indexVariant}
-            className="text-white mt-12 mb-12 md:mt-24 md:mb-16 text-center text-xl md:text-2xl mx-auto max-w-5xl"
+            className="text-white mt-12 mb-10 md:mt-24 md:mb-16 text-center text-2xl mx-auto"
           >
             Hello! My name is{" "}
-            <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">
+            <span className="font-custom text-3xl text-red-400 tracking-wide leading-tight">
               Thomas
             </span>
             , I am a{" "}
-            <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">
+            <span className="font-custom text-3xl text-red-400 tracking-wide leading-tight">
               {" "}
               front-end developer
             </span>{" "}
-            and{" "}
-            <span className="font-custom text-2xl md:text-3xl text-red-400 tracking-wide leading-tight">
-              {" "}
-              graphic designer
-            </span>
-            . Here is a selection of my work:
+            and used to be a graphic designer. Here is a selection of my work:
           </motion.h1>
         </header>
         {/* Projects List */}

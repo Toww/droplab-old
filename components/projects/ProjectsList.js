@@ -42,7 +42,7 @@ const ProjectsList = ({ allProjectsData }) => {
           >
             <Link href="/projects/[id]" as={`/projects/${id}`} scroll={false}>
               <a className="p-0 m-0">
-                <h2 className="lg:inline-block font-custom text-4xl md:text-6xl text-orange-300 leading-none">
+                <h2 className="lg:inline-block font-custom text-5xl md:text-6xl text-orange-300 leading-none">
                   {title}
                 </h2>
                 <p className="text-sm md:text-base lg:inline-block mt-1 md:mt-2 lg:mt-0 lg:ml-3 md:leading-tight">
