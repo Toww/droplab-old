@@ -53,7 +53,7 @@ form input {
 
 form input:focus,
 form textarea:focus {
-  @apply outline-none shadow-outline;
+  @apply ring;
 }
 
 /* ----- MEDIA QUERIES ----- */
