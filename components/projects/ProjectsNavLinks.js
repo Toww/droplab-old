@@ -28,7 +28,7 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
             </svg>
             {/* Project name */}
             <span className="hidden md:block">
-              {prevProject.title}
+              {prevProject.data.title}
             </span>
           </a>
         </Link>
@@ -50,7 +50,7 @@ const ProjectsNavLinks = ({ prevProject, nextProject }) => {
           <a className="w-1/3 flex mt-3 justify-end items-center font-custom text-right text-xl text-orange-300">
             {/* Project name */}
             <span className="hidden md:block">
-              {nextProject.title}
+              {nextProject.data.title}
             </span>
             {/* Right arrow */}
             <svg

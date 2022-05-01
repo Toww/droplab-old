@@ -1,10 +1,15 @@
-import hydrate from "next-mdx-remote/hydrate";
+// Misc
+import fs             from "fs";
+import path           from "path";
+import matter         from "gray-matter";
+import { MDXRemote }  from "next-mdx-remote";
+import { serialize }  from "next-mdx-remote/serialize";
+// Utils
 import {
-  getAllProjectsIds,
-  getProjectData,
-  getNextProject,
-  getPrevProject,
-} from "lib/projects";
+   projectsFilePaths,
+   PROJECTS_PATH 
+  } from "../../utils/mdxUtils";
+// Components
 import MainLayout from "components/layout/MainLayout";
 import VimeoEmbed from "components/projects/VimeoEmbed";
 import ProjectsNavLinks from "components/projects/ProjectsNavLinks";
@@ -18,9 +23,6 @@ export default function Project({
   prevProject,
   nextProject,
 }) {
-  // Using next-mdx-remote to get mdx content and apply components
-  // declared in components object
-  const content = hydrate(source, { components });
 
   return (
     <MainLayout title={frontMatter.title}>
@@ -34,13 +36,15 @@ export default function Project({
         </header>
         <main>
           {/* Content */}
-          <article className="text-lg text-center leading-relaxed">{content}</article>
+          <article className="text-lg text-center leading-relaxed">
+            <MDXRemote {...source} components={components} />
+          </article>
           {/* Separation  */}
           <div className="h-px bg-orange-300 w-full"></div>
           {/* Links */}
           <ProjectsNavLinks
-            prevProject={prevProject}
-            nextProject={nextProject}
+            prevProject={prevProject.data && prevProject}
+            nextProject={nextProject.data && nextProject}
           />
         </main>
       </div>
@@ -51,7 +55,11 @@ export default function Project({
 // Getting all possible path values from mdx files names
 // for Dynamic routing
 export async function getStaticPaths() {
-  const paths = getAllProjectsIds();
+  // Remove '.mdx' and returns paths
+  const paths = projectsFilePaths
+    .map((path) => path.replace(/\.mdx?$/, ""))
+    .map((id) => ({ params: { id } }));
+
   return {
     paths,
     fallback: false,
@@ -60,20 +68,38 @@ export async function getStaticPaths() {
 
 // Getting props for the project
 export async function getStaticProps({ params }) {
-  // Get project content and metadata
-  const { source, frontMatter } = await getProjectData(params.id, components);
+  const allProjectsData = projectsFilePaths.map((filePath) => {
+    const projectSource = fs.readFileSync(path.join(PROJECTS_PATH, filePath));
 
-  // Get prev and next projects' frontmatter object
-  // As order starts from 1 and the array  from 0,
-  // subtract 1 to get the good array index
-  const prevProject = getPrevProject(frontMatter.order - 1);
-  const nextProject = getNextProject(frontMatter.order - 1);
+    const {
+      content,
+      data,
+    } = matter(projectSource);
+
+    return {
+      content,
+      data,
+      id: filePath.replace(/\.mdx?$/, ""),
+    };
+  });
+
+  const currentProject  =   allProjectsData.find(proj => proj.id === params.id);
+  const prevProject     =   allProjectsData.find(proj => proj.data.order === (currentProject.data.order - 1));
+  const nextProject     =   allProjectsData.find((proj) => proj.data.order === currentProject.data.order + 1)
+
+  const mdxSource = await serialize(currentProject.content, {
+    mdxOptions: {},
+    scope: currentProject.data,
+  });
+
   return {
     props: {
-      source,
-      frontMatter,
-      prevProject,
-      nextProject,
+      source: mdxSource,
+      frontMatter: currentProject.data,
+      currentProject,
+      allProjectsData,
+      prevProject: prevProject || {},
+      nextProject: nextProject || {}
     },
   };
 }

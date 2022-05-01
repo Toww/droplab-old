@@ -1,6 +1,12 @@
-import { useCallback, useContext } from "react";
-import Link from "next/link";
+// Misc
+import { 
+  useCallback, 
+  useContext
+ }              from "react";
+import Link     from "next/link";
+// Components
 import CursorImage from "components/CursorImage";
+// Contexts
 import { CursorImageContext } from "contexts/CursorImageContext";
 
 const ProjectsList = ({ allProjectsData }) => {
